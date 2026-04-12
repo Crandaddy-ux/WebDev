@@ -1,0 +1,36 @@
+---
+// Navigation.astro
+---
+<nav>
+  <div class="nav-toggle" onClick={() => toggleMobileMenu()}>
+    {/* Mobile menu toggle icon */}
+    <span class="icon">☰</span>
+  </div>
+  <ul class={mobileMenu ? 'active' : ''}>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/services">Services</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+
+<style>
+  /* Add your styles here for navigation */
+  .nav-toggle {
+    cursor: pointer;
+  }
+  ul {
+    display: none;
+  }
+  ul.active {
+    display: block;
+  }
+</style>
+
+<script>
+  let mobileMenu = false;
+
+  function toggleMobileMenu() {
+    mobileMenu = !mobileMenu;
+  }
+</script>
