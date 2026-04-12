@@ -1,0 +1,46 @@
+---
+import { Link } from 'astro:router';
+---
+
+<header>
+  <nav>
+    <ul>
+      <li><Link href="/">Home</Link></li>
+      <li><Link href="/about">About</Link></li>
+      <li><Link href="/services">Services</Link></li>
+      <li><Link href="/contact">Contact</Link></li>
+    </ul>
+  </nav>
+  <div class="hero">
+    <h1>Welcome to Our Website</h1>
+    <p>Your subtitle highlighting what you do.</p>
+    <a class="cta-button" href="/get-started">Get Started</a>
+  </div>
+</header>
+
+<style>
+header {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+</style>
