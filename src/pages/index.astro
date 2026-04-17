@@ -1,29 +1,10 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebDev - Build Amazing Websites</title>
-  </head>
-  <body>
-    <Header 
-      title="Welcome to WebDev"
-      subtitle="Build amazing websites with Astro"
-    />
-    
-    <main class="container">
-      <section id="projects" class="mt-2">
-        <h2 class="text-center">Featured Projects</h2>
-        <p class="text-center">Check back soon for featured projects!</p>
-      </section>
-    </main>
-
-    <Footer />
-    <script src="../script.js"></script>
-  </body>
-</html>
+<BaseLayout pageTitle="WebDev | Home">
+  <section class="mt-2 mb-2 text-center">
+    <h2>Featured Projects</h2>
+    <p>Check back soon for featured projects!</p>
+  </section>
+</BaseLayout>
